@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v3
       
       - name: Compile
-        run: C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe
+        run: C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe /p:Configuration=Release
 
       - name: Upload
         uses: actions/upload-artifact@v1
