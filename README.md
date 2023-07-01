@@ -20,7 +20,7 @@ Several ai image genertors like [Stable Diffusion](https://github.com/Stability-
 ## Credits:
 Thanks to xBRZ algorithum, which previously used for upscaling old game resources and still add huge contribution to our ai images.
 - [xBRZ.NET](https://github.com/MiYanni/xBRZ.NET)
-- [xBRZ in Java](https://github.com/MiYanni/xBRZ.NET)
+- [xBRZ in Java](https://intrepidis.blogspot.com/2014/02/xbrz-in-java.html)
 - [xBRZ in C++ by Zenju](https://sourceforge.net/projects/xbrz))
 
 ## Contact for business queries:
