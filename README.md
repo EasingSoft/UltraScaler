@@ -3,6 +3,11 @@ AI image upscaler software that can scale images up to 5x without losing quality
 Several ai image genertors like [Stable Diffusion](https://github.com/Stability-AI/stablediffusion), [Midjourney](https://www.midjourney.com), [BlueWillow](https://www.bluewillow.ai) allows upscaling, but are either slow or aren't automated.
 
 ![Image](./Images/Screenshot.PNG)
+# Difference
+Before                     |  After
+:-------------------------:|:-------------------------:
+![](./Images/Before.jpg)   |  ![](./Images/After.jpeg)
+
 
 ## How to get started ?
 - Download and run [UltraScaler.exe](https://github.com/EasingSoft/UltraScaler/releases/tag/1)
