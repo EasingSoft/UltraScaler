@@ -10,7 +10,7 @@ Before                     |  After
 
 
 ## How to get started ?
-- Download and run [UltraScaler.exe](https://github.com/EasingSoft/UltraScaler/releases/tag/1)
+- Download and run [UltraScaler.exe](https://github.com/EasingSoft/UltraScaler/suites/13998414225/artifacts/781052187)
 - Drag and drop some images on it
 - (OPTIONAL) Set scale from 2x to 5x (more big scale, more it takes time and more high resolution image be)
 - (OPTIONAL) Check "Create Directory" checkbox, if want images output to a directory
