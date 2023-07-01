@@ -1,5 +1,6 @@
 name: Build
 on:
+  push:  
   workflow_dispatch:  
 jobs:
   build:
@@ -9,3 +10,9 @@ jobs:
       
       - name: Compile
         run: C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe
+
+      - name: Upload
+        uses: actions/upload-artifact@v1
+        with:
+            name: UltraScaler
+            path: "./bin/Release/UltraScaler.exe"
