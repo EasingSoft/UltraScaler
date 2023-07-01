@@ -25,6 +25,7 @@ Partial Class Main
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Main))
         Me.Grid = New System.Windows.Forms.DataGridView()
         Me.Preview = New System.Windows.Forms.DataGridViewImageColumn()
         Me.FilePath = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -38,6 +39,10 @@ Partial Class Main
         Me.Progress = New System.Windows.Forms.ProgressBar()
         Me.Worker = New System.ComponentModel.BackgroundWorker()
         Me.OutputToDir = New System.Windows.Forms.CheckBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.EasingSoft = New System.Windows.Forms.LinkLabel()
         CType(Me.Grid, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -72,7 +77,7 @@ Partial Class Main
         Me.Grid.DefaultCellStyle = DataGridViewCellStyle2
         Me.Grid.EnableHeadersVisualStyles = False
         Me.Grid.GridColor = System.Drawing.Color.FromArgb(CType(CType(33, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(42, Byte), Integer))
-        Me.Grid.Location = New System.Drawing.Point(18, 18)
+        Me.Grid.Location = New System.Drawing.Point(18, 14)
         Me.Grid.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Grid.Name = "Grid"
         DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -86,7 +91,7 @@ Partial Class Main
         Me.Grid.RowHeadersVisible = False
         Me.Grid.RowTemplate.Height = 100
         Me.Grid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.Grid.Size = New System.Drawing.Size(573, 373)
+        Me.Grid.Size = New System.Drawing.Size(573, 353)
         Me.Grid.TabIndex = 0
         '
         'Preview
@@ -133,7 +138,7 @@ Partial Class Main
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(14, 422)
+        Me.Label1.Location = New System.Drawing.Point(14, 389)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(59, 20)
@@ -149,7 +154,7 @@ Partial Class Main
         Me.ScaleCount.ForeColor = System.Drawing.Color.White
         Me.ScaleCount.FormattingEnabled = True
         Me.ScaleCount.Items.AddRange(New Object() {"2", "3", "4", "5"})
-        Me.ScaleCount.Location = New System.Drawing.Point(80, 419)
+        Me.ScaleCount.Location = New System.Drawing.Point(80, 386)
         Me.ScaleCount.Name = "ScaleCount"
         Me.ScaleCount.Size = New System.Drawing.Size(102, 28)
         Me.ScaleCount.TabIndex = 2
@@ -161,7 +166,7 @@ Partial Class Main
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(189, 422)
+        Me.Label2.Location = New System.Drawing.Point(189, 389)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(47, 20)
@@ -174,7 +179,7 @@ Partial Class Main
         Me.Start.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.Start.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Start.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Start.Location = New System.Drawing.Point(477, 415)
+        Me.Start.Location = New System.Drawing.Point(477, 382)
         Me.Start.Name = "Start"
         Me.Start.Size = New System.Drawing.Size(114, 35)
         Me.Start.TabIndex = 4
@@ -186,7 +191,7 @@ Partial Class Main
         Me.Progress.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Progress.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
-        Me.Progress.Location = New System.Drawing.Point(18, 391)
+        Me.Progress.Location = New System.Drawing.Point(18, 367)
         Me.Progress.Name = "Progress"
         Me.Progress.Size = New System.Drawing.Size(573, 10)
         Me.Progress.Style = System.Windows.Forms.ProgressBarStyle.Continuous
@@ -197,15 +202,62 @@ Partial Class Main
         '
         'OutputToDir
         '
+        Me.OutputToDir.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.OutputToDir.AutoSize = True
         Me.OutputToDir.Cursor = System.Windows.Forms.Cursors.Hand
         Me.OutputToDir.ForeColor = System.Drawing.Color.White
-        Me.OutputToDir.Location = New System.Drawing.Point(274, 421)
+        Me.OutputToDir.Location = New System.Drawing.Point(274, 388)
         Me.OutputToDir.Name = "OutputToDir"
         Me.OutputToDir.Size = New System.Drawing.Size(143, 24)
         Me.OutputToDir.TabIndex = 6
         Me.OutputToDir.Text = "Create Directory"
         Me.OutputToDir.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label3.AutoSize = True
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(14, 430)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(85, 20)
+        Me.Label3.TabIndex = 7
+        Me.Label3.Text = "Made with "
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Red
+        Me.Label4.Location = New System.Drawing.Point(91, 425)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(29, 31)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "♥"
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label5.AutoSize = True
+        Me.Label5.ForeColor = System.Drawing.Color.White
+        Me.Label5.Location = New System.Drawing.Point(118, 430)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(41, 20)
+        Me.Label5.TabIndex = 9
+        Me.Label5.Text = "from"
+        '
+        'EasingSoft
+        '
+        Me.EasingSoft.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.EasingSoft.AutoSize = True
+        Me.EasingSoft.LinkColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.EasingSoft.Location = New System.Drawing.Point(157, 430)
+        Me.EasingSoft.Name = "EasingSoft"
+        Me.EasingSoft.Size = New System.Drawing.Size(88, 20)
+        Me.EasingSoft.TabIndex = 10
+        Me.EasingSoft.TabStop = True
+        Me.EasingSoft.Text = "EasingSoft"
         '
         'Main
         '
@@ -213,6 +265,10 @@ Partial Class Main
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(18, Byte), Integer), CType(CType(24, Byte), Integer), CType(CType(32, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(609, 459)
+        Me.Controls.Add(Me.EasingSoft)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.OutputToDir)
         Me.Controls.Add(Me.Progress)
         Me.Controls.Add(Me.Start)
@@ -221,6 +277,7 @@ Partial Class Main
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Grid)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "Main"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -244,4 +301,8 @@ Partial Class Main
     Friend WithEvents Out_Dimensions As DataGridViewTextBoxColumn
     Friend WithEvents Worker As System.ComponentModel.BackgroundWorker
     Friend WithEvents OutputToDir As CheckBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents EasingSoft As LinkLabel
 End Class

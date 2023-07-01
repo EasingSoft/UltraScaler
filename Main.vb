@@ -99,4 +99,7 @@ Public Class Main
 
     End Sub
 
+    Private Sub EasingSoft_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles EasingSoft.LinkClicked
+        Process.Start("https://github.com/EasingSoft/UltraScaler")
+    End Sub
 End Class
