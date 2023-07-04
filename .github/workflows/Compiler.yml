@@ -12,8 +12,7 @@ jobs:
         run: C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe /p:Configuration=Release
 
       - name: Upload
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v3
         with:
             name: UltraScaler
             path: "./bin/Release/UltraScaler.exe"
-            archive_format: none
