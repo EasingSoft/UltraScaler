@@ -16,3 +16,4 @@ jobs:
         with:
             name: UltraScaler
             path: "./bin/Release/UltraScaler.exe"
+            archive_format: none
