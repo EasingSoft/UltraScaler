@@ -1,6 +1,6 @@
 # UltraScaler
 AI image upscaler software that can scale images up to 5x without losing quality. Due to vast trend for Generative AI content in market, I decided to make app that intelligently upscale my ai images in bulk, which can be sold on stock websites. Because they don't allow low res images.
-Several ai image genertors like [Stable Diffusion](https://github.com/Stability-AI/stablediffusion), [Midjourney](https://www.midjourney.com), [BlueWillow](https://www.bluewillow.ai) allows upscaling, but are either slow or aren't automated.
+Several ai image genertors like [Stable Diffusion](https://github.com/Stability-AI/stablediffusion), [Midjourney](https://www.midjourney.com), [BlueWillow](https://www.bluewillow.ai) allows upscaling, but are either slow or are not automated.
 
 ![Image](./Images/Screenshot.PNG)
 # Difference
